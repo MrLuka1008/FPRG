@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+body {
+  background: radial-gradient(circle at bottom, navy 0, black 100%);
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: wheat;
+}
+body h2 {
+  font-size: 64px;
+}
+body a {
+  font-size: 44px;
+  color: #000000;
+}
+
+.start-game {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  color: white;
+}
+.start-game a {
+  color: white;
+}
+.start-game .game-hints {
+  bottom: 0;
+  left: 45%;
+  position: absolute;
+}
+
+.space {
+  background: rgba(128, 0, 128, 0.1) center/200px 200px round;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.stars1 {
+  -webkit-animation: space 180s ease-in-out infinite;
+          animation: space 180s ease-in-out infinite;
+  background-image: radial-gradient(1px 1px at 25px 5px, white, rgba(255, 255, 255, 0)), radial-gradient(1px 1px at 50px 25px, white, rgba(255, 255, 255, 0)), radial-gradient(1px 1px at 125px 20px, white, rgba(255, 255, 255, 0)), radial-gradient(1.5px 1.5px at 50px 75px, white, rgba(255, 255, 255, 0)), radial-gradient(2px 2px at 15px 125px, white, rgba(255, 255, 255, 0)), radial-gradient(2.5px 2.5px at 110px 80px, white, rgba(255, 255, 255, 0));
+}
+
+.stars2 {
+  -webkit-animation: space 240s ease-in-out infinite;
+          animation: space 240s ease-in-out infinite;
+  background-image: radial-gradient(1px 1px at 75px 125px, white, rgba(255, 255, 255, 0)), radial-gradient(1px 1px at 100px 75px, white, rgba(255, 255, 255, 0)), radial-gradient(1.5px 1.5px at 199px 100px, white, rgba(255, 255, 255, 0)), radial-gradient(2px 2px at 20px 50px, white, rgba(255, 255, 255, 0)), radial-gradient(2.5px 2.5px at 100px 5px, white, rgba(255, 255, 255, 0)), radial-gradient(2.5px 2.5px at 5px 5px, white, rgba(255, 255, 255, 0));
+}
+
+.stars3 {
+  -webkit-animation: space 300s ease-in-out infinite;
+          animation: space 300s ease-in-out infinite;
+  background-image: radial-gradient(1px 1px at 10px 10px, white, rgba(255, 255, 255, 0)), radial-gradient(1px 1px at 150px 150px, white, rgba(255, 255, 255, 0)), radial-gradient(1.5px 1.5px at 60px 170px, white, rgba(255, 255, 255, 0)), radial-gradient(1.5px 1.5px at 175px 180px, white, rgba(255, 255, 255, 0)), radial-gradient(2px 2px at 195px 95px, white, rgba(255, 255, 255, 0)), radial-gradient(2.5px 2.5px at 95px 145px, white, rgba(255, 255, 255, 0));
+}
+
+.game-container {
+  background-color: beige;
+  width: 500px;
+  height: 600px;
+  position: relative;
+}
+
+#rocket {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  bottom: 20px;
+}
+
+#bullet {
+  background-color: rgb(250, 114, 23);
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  bottom: -10px;
+}
+
+#rock {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: -50px;
+  -webkit-animation: rockdown 10s linear;
+          animation: rockdown 10s linear;
+}
+
+#back-boxtwo {
+  background-color: #c12525;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 70px;
+  left: 200px;
+}
+
+label {
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+#gameOver {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  gap: 2rem;
+  display: none;
+}
+#gameOver a {
+  color: white;
+}
+
+@-webkit-keyframes rockdown {
+  0% {
+    top: -20px;
+  }
+  100% {
+    top: 600px;
+  }
+}
+
+@keyframes rockdown {
+  0% {
+    top: -20px;
+  }
+  100% {
+    top: 600px;
+  }
+}
+@-webkit-keyframes gunshooting {
+  0% {
+    bottom: 30px;
+  }
+  100% {
+    bottom: 600px;
+  }
+}
+@keyframes gunshooting {
+  0% {
+    bottom: 30px;
+  }
+  100% {
+    bottom: 600px;
+  }
+}
+@-webkit-keyframes space {
+  40% {
+    opacity: 0.75;
+  }
+  50% {
+    opacity: 0.25;
+  }
+  60% {
+    opacity: 0.75;
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes space {
+  40% {
+    opacity: 0.75;
+  }
+  50% {
+    opacity: 0.25;
+  }
+  60% {
+    opacity: 0.75;
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}/*# sourceMappingURL=style.css.map */
